@@ -6,21 +6,21 @@
 // This may mean reinventing the wheel in some cases but I do not want anything 
 // going on under the hood which I am not aware of.
 // I will 'borrow' functions and snippets where required. This will be referenced.
-if (typeof (com) === "undefined") {
-    com = {};
+if (typeof (littleDebugger) === "undefined") {
+    littleDebugger = {};
 }
 
-if (typeof (com.littleDebugger) === "undefined") {
-    com.littleDebugger = {};
+if (typeof (littleDebugger.common) === "undefined") {
+    littleDebugger.common = {};
 }
 
-if (typeof (com.littleDebugger.namespacer) === "undefined") {
-    com.littleDebugger.namespacer = {};
+if (typeof (littleDebugger.common.namespacer) === "undefined") {
+    littleDebugger.common.namespacer = {};
 }
 
 // Creates a namespace in the global space.
 // <namespaceText> . seperated namespace to be created.
-com.littleDebugger.namespacer.createNamespace = function(namespaceText) {
+littleDebugger.common.namespacer.createNamespace = function(namespaceText) {
     var namespaces = namespaceText.split(".");
     if (typeof (window[namespaces[0]]) === "undefined") {
         window[namespaces[0]] = {};
